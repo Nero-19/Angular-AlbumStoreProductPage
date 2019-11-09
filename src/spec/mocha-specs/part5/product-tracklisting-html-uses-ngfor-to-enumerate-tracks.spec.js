@@ -11,7 +11,7 @@ describe("ProductTracklisting", () => {
       "src/app/product-tracklisting/product-tracklisting.component.html"
     );
     const productTracklistingNodes = helpers.parseFile(productTracklistingFile);
-    productTracklistingNodes[0].attrs(
+    productTracklistingNodes[0].attrs.find(
       attr => (tracklisting = attr.value.match(/tracklisting/))
     );
     const productListing = parse5.serialize(productTracklistingNodes[0]);
